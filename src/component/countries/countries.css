@@ -1,0 +1,8 @@
+
+.the_country {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px red solid;
+  width: 50vw;
+}
