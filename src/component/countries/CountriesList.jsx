@@ -3,7 +3,7 @@ import County from './County';
 
 const CountriesList = () => {
 	const ids = [{id: 1},{id: 2}, {id: 3}, {id: 4} ];
-	const list = ids.map((item) => ( 
+	const list = ids.map((item) => (
 		<li key={item.id}>
      <County />
 		</li>
