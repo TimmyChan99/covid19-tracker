@@ -7,17 +7,16 @@ const CountriesList = () => {
 	
 	const list = stats ? 
 	  stats.map((item) => {
-		for (const keyprop in item ) {
+		
 
 		return (
-		<li key={keyprop}>
+		<li key={item.name}>
      <County 
-		 countryName = {keyprop}
-		 confimedCases = {item[keyprop].today_confirmed}
+		 countryName = {item.name}
+		 confimedCases = {item.today_confirmed}
 		 />
 		</li>)
-		
-		}
+
 	}) : [];
 
 	return (
