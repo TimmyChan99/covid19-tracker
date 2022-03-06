@@ -6,3 +6,30 @@
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
+
+button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.d-flex-row {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  background-color: #ec4c8a;
+  color: #fff;
+  justify-content: space-around;
+  padding: 0.5em;
+}
+
+header svg {
+  font-size: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}

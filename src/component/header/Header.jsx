@@ -1,16 +1,24 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { IoIosArrowBack } from 'react-icons/io'
+import { CgCalendarDates } from 'react-icons/cg'
 
 const header = () => {
 	return (
-		<header>
-			<NavLink to="covid19-tracker/countries-list">
-			<button type="button">Go back</button>
+		<header className="d-flex-row">
+			<button type="button">
+			<NavLink to="covid19-tracker/countries-list" className="d-flex-row link">
+			  <IoIosArrowBack />
+				Go back
 			</NavLink>
-			<NavLink to="covid19-tracker/">
-			<button type="button">Change date</button>
+			</button>
+			<span>Covid-19 Tracker</span>
+			<button type="button">
+			<NavLink to="covid19-tracker/" className="d-flex-row link">
+				Change date
+				<CgCalendarDates />
 			</NavLink>
-			<div>Country views</div>
+			</button>
 		</header>
 	)
 }
