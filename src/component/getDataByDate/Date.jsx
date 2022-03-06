@@ -1,9 +1,12 @@
 import React from 'react'
+import getStatsFromAPI from '../../api/covidTrackingAPI';
 import './date.css'
 
 const Date = () => {
 	const getDate = (e) => {
-		console.log(e.target.value);
+		const date = e.target.value;
+		console.log(date);
+		getStatsFromAPI(date);
 	}
 	return (
 		<div className="date_container d-flex-column">
