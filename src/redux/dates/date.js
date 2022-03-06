@@ -29,7 +29,7 @@ const statsReducer = (state = initialState, action) => {
 		return action.payload;
 
 	case FILTER:
-		const filtredCountry = state.filter((item) => (item.name == action.payload))
+		const filtredCountry = state.filter((item) => (item.name === action.payload || item.name === "Total"))
 		return filtredCountry;
 
 	default:
