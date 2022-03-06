@@ -1,8 +1,11 @@
 import React from 'react'
 import './details.css'
 import { FaVirus } from 'react-icons/fa'
+import { useSelector } from 'react-redux'
 
 const Details = () => {
+	const selectedCountry = useSelector((state) => state.statsReducer)
+	console.log(selectedCountry);
 	return (
 		<div className="country_details">
 			<div className="headline">
