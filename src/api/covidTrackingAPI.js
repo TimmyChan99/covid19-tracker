@@ -23,7 +23,7 @@ const getStatsFromAPI = async (selectedDate) => {
 			today_vs_yesterday_confirmed,
 			today_recovered,
 		} = countries[key];
-		
+
     obj[key] = { 
 			today_confirmed,
 			today_new_deaths,
@@ -35,7 +35,7 @@ const getStatsFromAPI = async (selectedDate) => {
 			today_recovered,
 		};
   }
-  console.log(obj);
+  return obj;
 }
 
 export default getStatsFromAPI;

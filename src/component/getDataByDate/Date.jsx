@@ -1,12 +1,14 @@
 import React from 'react'
-import getStatsFromAPI from '../../api/covidTrackingAPI';
+import { useDispatch } from 'react-redux'
+import { getStatsFromAPIDispatcher } from '../../redux/dates/date'
 import './date.css'
 
 const Date = () => {
+	const dispatch = useDispatch();
 	const getDate = (e) => {
 		const date = e.target.value;
 		console.log(date);
-		getStatsFromAPI(date);
+		dispatch(getStatsFromAPIDispatcher(date));
 	}
 	return (
 		<div className="date_container d-flex-column">
@@ -20,4 +22,5 @@ const Date = () => {
 	)
 }
 
-export default Date
+export default Date;
+
