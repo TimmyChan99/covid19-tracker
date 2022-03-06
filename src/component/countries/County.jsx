@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 import './countries.css'
 import { BsArrowRightCircle } from 'react-icons/bs';
 
-const County = () => {
+const County = ({countryName, confimedCases}) => {
 	return (
 		<div className="the_country">
-			<h3>France</h3>
+			<h3>{countryName}</h3>
 		<div className="more_details">
-				<span>25 cases</span>
+				<span>{confimedCases} cases</span>
 				<NavLink to="/detail">
 				<button type="button">
 				  <BsArrowRightCircle/>

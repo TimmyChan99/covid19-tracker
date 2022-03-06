@@ -8,11 +8,15 @@ const getStatsFromAPI = async (selectedDate) => {
  const stringDate = selectedDate.toString();
 	const { [ stringDate ] : date } = response.dates;
   const { countries } = date;
-	const obj = {
+	const totalStat = {
     total : response.total,
   };
+	
+	const countriesStats = [];
+	
 	for (const key in countries) {
-    obj[key] = {};
+		const obj = {}
+     obj[key] = {};
     const { 
 			today_confirmed,
 			today_new_deaths,
@@ -34,8 +38,10 @@ const getStatsFromAPI = async (selectedDate) => {
 			today_vs_yesterday_confirmed,
 			today_recovered,
 		};
+		countriesStats.push({[key]: obj[key]})
   }
-  return obj;
+	countriesStats.push(totalStat)
+  return countriesStats;
 }
 
 export default getStatsFromAPI;

@@ -7,7 +7,6 @@ const Date = () => {
 	const dispatch = useDispatch();
 	const getDate = (e) => {
 		const date = e.target.value;
-		console.log(date);
 		dispatch(getStatsFromAPIDispatcher(date));
 	}
 	return (

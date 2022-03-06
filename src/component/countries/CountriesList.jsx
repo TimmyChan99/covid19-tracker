@@ -1,13 +1,25 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import County from './County';
 
 const CountriesList = () => {
-	const ids = [{id: 1},{id: 2}, {id: 3}, {id: 4} ];
-	const list = ids.map((item) => (
-		<li key={item.id}>
-     <County />
-		</li>
-	))
+	const stats = useSelector((state) => state.statsReducer)
+	
+	const list = stats ? 
+	  stats.map((item) => {
+		for (const keyprop in item ) {
+
+		return (
+		<li key={keyprop}>
+     <County 
+		 countryName = {keyprop}
+		 confimedCases = {item[keyprop].today_confirmed}
+		 />
+		</li>)
+		
+		}
+	}) : [];
+
 	return (
 	 <ul className="countries_list">
 		{list}
