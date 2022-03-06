@@ -1,22 +1,22 @@
 .date_container {
-	background-color: #000;
-	height: calc(100vh - 36px);
-	justify-content: center;
+  background-color: #000;
+  height: calc(100vh - 36px);
+  justify-content: center;
 }
 
 .date_container h1 {
-	color: #de4f85;
-	position: relative;
-	bottom: 30px;
-	font-size: 40px;
+  color: #de4f85;
+  position: relative;
+  bottom: 30px;
+  font-size: 40px;
 }
 
 .date_modal {
-	background-color: #de4f85;
-	border-radius: 8px;
-	color: #fff;
-	width: 75vw;
-	height: 30vh;
-	justify-content: space-around;
-	padding: 50px;
+  background-color: #de4f85;
+  border-radius: 8px;
+  color: #fff;
+  width: 75vw;
+  height: 30vh;
+  justify-content: space-around;
+  padding: 50px;
 }
