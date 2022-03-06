@@ -9,7 +9,7 @@ const CountriesList = () => {
 		</li>
 	))
 	return (
-	 <ul>
+	 <ul className="countries_list">
 		{list}
 	 </ul>
 	)

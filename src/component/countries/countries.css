@@ -2,7 +2,34 @@
 .the_country {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border: 1px red solid;
-  width: 50vw;
+  justify-content: space-between;
+  padding: 1em 0.8em;
+  color: #fff;
+}
+
+.countries_list li {
+  background-color: #d04379;
+}
+
+.countries_list li:nth-child(odd) {
+  background-color: #ec4c8a;
+}
+
+.more_details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 35%;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.more_details button {
+  border: none;
+  background: none;
+}
+
+.more_details svg {
+  color: #fff;
+  font-size: 20px;
 }
