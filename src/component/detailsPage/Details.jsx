@@ -4,7 +4,11 @@ import { FaVirus } from 'react-icons/fa'
 import { useSelector } from 'react-redux'
 
 const Details = () => {
-	const selectedCountry = useSelector((state) => state.statsReducer)
+	const countries = useSelector((state) => state.statsReducer)
+	const countryName = countries[0].name;
+	const selectedCountry = countries ? countries.filter((item) => (item.id === countryName || item.id === "Total")) : []; // pass default param in the array
+	console.log(selectedCountry);
+	
 	
 	return (
 		<div className="country_details">

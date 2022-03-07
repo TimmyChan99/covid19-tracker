@@ -6,6 +6,7 @@ import Date from './component/getDataByDate/Date';
 import Details from './component/detailsPage/Details';
 
 function App() {
+  
   return (
     <Router>
       <Header />

@@ -8,7 +8,9 @@ const getStatsFromAPI = async (selectedDate) => {
  const stringDate = selectedDate.toString();
 	const { [ stringDate ] : date } = response.dates;
   const { countries } = date;
-	const totalStat = response.total;
+	const totalStat = {
+		...response.total, id: 'Total',
+	};
 	
 	const countriesStats = [];
 	
@@ -40,6 +42,7 @@ const getStatsFromAPI = async (selectedDate) => {
 		// };
 		//countriesStats.push({[key]: obj[key]})
 		countriesStats.push({
+			id : name,
 			name, 
 			today_confirmed,
 			today_new_deaths,
