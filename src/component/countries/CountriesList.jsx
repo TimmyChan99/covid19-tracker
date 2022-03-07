@@ -13,7 +13,7 @@ const CountriesList = () => {
 		<li key={item.id}>
      <County 
 		 countryName = {item.name}
-		 confimedCases = {item.today_confirmed}
+		 confimedCases = {item.todayConfirmed}
 		 />
 		</li>)
 

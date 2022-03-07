@@ -15,38 +15,38 @@ const Details = () => {
 			<div className="headline">
        <h2>{selectedCountry[0].name}</h2>
 			 <div className="headline_stat d-flex-column">
-				 <span>{selectedCountry[0].today_confirmed}</span>
+				 <span>{selectedCountry[0].todayConfirmed}</span>
 				 <span>Today confirmed</span>
 			 </div>
 			 <div className="headline_stat d-flex-column">
-				 <span>{selectedCountry[1].today_confirmed}</span>
+				 <span>{selectedCountry[1].todayConfirmed}</span>
 				 <span>Total confirmed</span>
 			 </div>
 			 <FaVirus />
 			</div>
 			<small>ALL STATS</small>
 			<div className="today_confirmed box d-flex-column">
-				<span className="stat_number">{selectedCountry[0].today_confirmed}</span>
+				<span className="stat_number">{selectedCountry[0].todayConfirmed}</span>
 				<span>today confirmed</span>	
 			</div>
 			<div className="new_death box-odd d-flex-column">
-				<span className="stat_number">{selectedCountry[0].today_new_deaths}</span>
+				<span className="stat_number">{selectedCountry[0].todayNewDeaths}</span>
 				<span>new death</span>
 			</div>
 			<div className="new_recovery box-odd d-flex-column">
-				<span className="stat_number">{selectedCountry[0].today_new_recovered}</span>
+				<span className="stat_number">{selectedCountry[0].todayNewRecovered}</span>
 				<span>new recovery</span>
 			</div>
 			<div className="today_vs_yesterday_open_cases box d-flex-column">
-				<span className="stat_number">{selectedCountry[0].today_vs_yesterday_open_cases.toExponential(2)}</span>
+				<span className="stat_number">{selectedCountry[0].todayVsYesterdayOpenCases.toExponential(2)}</span>
 				<span>today vs yesterday <br /> open cases</span>
 			</div>
 			<div className="today_vs_yesterday_deaths box d-flex-column">
-				<span className="stat_number">{selectedCountry[0].today_vs_yesterday_deaths.toExponential(2)}</span>
+				<span className="stat_number">{selectedCountry[0].todayVsYesterdayDeaths.toExponential(2)}</span>
 				<span>today vs yesterday <br /> deaths</span>
 			</div>
 			<div className="today_vs_yesterday_confirmed box-odd d-flex-column">
-				<span className="stat_number">{selectedCountry[0].today_vs_yesterday_confirmed.toExponential(2)}</span>
+				<span className="stat_number">{selectedCountry[0].todayVsYesterdayConfirmed.toExponential(2)}</span>
 				<span>today vs yesterday <br /> confirmed</span>
 			</div>
 			<div className="total_confirmed box-odd d-flex-column">

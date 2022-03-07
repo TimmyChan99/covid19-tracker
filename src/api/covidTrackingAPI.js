@@ -13,45 +13,33 @@ const getStatsFromAPI = async (selectedDate) => {
   };
 
   const countriesStats = [];
-
+  console.log(Object.entries(countries));
   for (const key in countries) {
     const obj = {};
     obj[key] = {};
     const {
       name,
-      today_confirmed,
-      today_new_deaths,
-      today_new_recovered,
-      yesterday_deaths,
-      today_vs_yesterday_open_cases,
-      today_vs_yesterday_deaths,
-      today_vs_yesterday_confirmed,
-      today_recovered,
+      today_confirmed: todayConfirmed,
+      today_new_deaths: todayNewDeaths,
+      today_new_recovered: todayNewRecovered,
+      yesterday_deaths: yesterdayDeaths,
+      today_vs_yesterday_open_cases: todayVsYesterdayOpenCases,
+      today_vs_yesterday_deaths: todayVsYesterdayDeaths,
+      today_vs_yesterday_confirmed: todayVsYesterdayConfirmed,
+      today_recovered: todayRecovered,
     } = countries[key];
 
-    // obj[key] = {
-    // 	name,
-    // 	today_confirmed,
-    // 	today_new_deaths,
-    // 	today_new_recovered,
-    // 	yesterday_deaths,
-    // 	today_vs_yesterday_open_cases,
-    // 	today_vs_yesterday_deaths,
-    // 	today_vs_yesterday_confirmed,
-    // 	today_recovered,
-    // };
-    // countriesStats.push({[key]: obj[key]})
     countriesStats.push({
       id: name,
       name,
-      today_confirmed,
-      today_new_deaths,
-      today_new_recovered,
-      yesterday_deaths,
-      today_vs_yesterday_open_cases,
-      today_vs_yesterday_deaths,
-      today_vs_yesterday_confirmed,
-      today_recovered,
+      todayConfirmed,
+      todayNewDeaths,
+      todayNewRecovered,
+      yesterdayDeaths,
+      todayVsYesterdayOpenCases,
+      todayVsYesterdayDeaths,
+      todayVsYesterdayConfirmed,
+      todayRecovered,
     });
   }
   countriesStats.push(totalStat);
