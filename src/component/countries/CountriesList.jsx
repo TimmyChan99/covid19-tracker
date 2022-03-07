@@ -4,19 +4,6 @@ import County from './County';
 
 const CountriesList = () => {
 	const stats = useSelector((state) => state.statsReducer)
-	// const list = stats ? 
-	//   stats.map((item) => {
-		
-
-	// 	return (
-	// 	<li key={item.name}>
-  //    <County 
-	// 	 countryName = {item.name}
-	// 	 confimedCases = {item.today_confirmed}
-	// 	 />
-	// 	</li>)
-
-	// }) : [];
 
 	const list = stats ? 
 	  stats

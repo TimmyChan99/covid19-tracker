@@ -8,7 +8,6 @@ import { filterCountriesAction, storeSelectedCountry } from '../../redux/dates/d
 const County = ({countryName, confimedCases }) => {
 	const dispatch = useDispatch();
 	const getCountryName = (e) => {
-    //dispatch(filterCountriesAction(e.target.parentNode.value))
 		dispatch(storeSelectedCountry(e.target.parentNode.value))
 	}
 	return (
