@@ -4,13 +4,12 @@ import logger from 'redux-logger';
 import statsReducer from './dates/date';
 
 const reducer = combineReducers({
-	statsReducer,
+  statsReducer,
 });
 
 const store = createStore(
   reducer,
-  applyMiddleware(logger, thunk)
+  applyMiddleware(logger, thunk),
 );
 
 export default store;
-

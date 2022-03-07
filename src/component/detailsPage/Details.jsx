@@ -38,19 +38,19 @@ const Details = () => {
 				<span>new recovery</span>
 			</div>
 			<div className="today_vs_yesterday_open_cases box d-flex-column">
-				<span className="stat_number">{selectedCountry[0].today_vs_yesterday_open_cases}</span>
+				<span className="stat_number">{selectedCountry[0].today_vs_yesterday_open_cases.toExponential(2)}</span>
 				<span>today vs yesterday <br /> open cases</span>
 			</div>
 			<div className="today_vs_yesterday_deaths box d-flex-column">
-				<span className="stat_number">{selectedCountry[0].today_vs_yesterday_deaths}</span>
+				<span className="stat_number">{selectedCountry[0].today_vs_yesterday_deaths.toExponential(2)}</span>
 				<span>today vs yesterday <br /> deaths</span>
 			</div>
 			<div className="today_vs_yesterday_confirmed box-odd d-flex-column">
-				<span className="stat_number">{selectedCountry[0].today_vs_yesterday_confirmed}</span>
+				<span className="stat_number">{selectedCountry[0].today_vs_yesterday_confirmed.toExponential(2)}</span>
 				<span>today vs yesterday <br /> confirmed</span>
 			</div>
 			<div className="total_confirmed box-odd d-flex-column">
-				<span className="stat_number">{selectedCountry[1].today_confirmed}</span>
+				<span className="stat_number">{selectedCountry[1].today_confirmed.toExponential(2)}</span>
 				<span>Total confirmed</span>
 			</div>
 			<div className="total_new_death box d-flex-column">

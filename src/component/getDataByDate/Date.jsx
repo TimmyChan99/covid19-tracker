@@ -15,8 +15,8 @@ const Date = () => {
 			<div className="date_modal d-flex-column">
 				<span>Choose a Specific Day</span>
 				<input type="date" onChange={getDate}/>
-				<button type="button">Show stats</button>
 			</div>
+				<button type="button">Show stats</button>
 		</div>
 	)
 }

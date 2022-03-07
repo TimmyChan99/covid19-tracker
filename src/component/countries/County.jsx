@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import './countries.css'
 import { BsArrowRightCircle } from 'react-icons/bs';
-import { filterCountriesAction, storeSelectedCountry } from '../../redux/dates/date'
+import { storeSelectedCountry } from '../../redux/dates/date'
 
 const County = ({countryName, confimedCases }) => {
 	const dispatch = useDispatch();

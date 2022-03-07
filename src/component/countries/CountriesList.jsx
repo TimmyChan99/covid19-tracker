@@ -19,10 +19,14 @@ const CountriesList = () => {
 
 	}) : [];
 
+	
+
 	return (
+		
 	 <ul className="countries_list">
-		{list}
+		{ list }
 	 </ul>
+	
 	)
 }
 

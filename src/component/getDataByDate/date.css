@@ -16,7 +16,24 @@
   border-radius: 8px;
   color: #fff;
   width: 75vw;
-  height: 30vh;
-  justify-content: space-around;
-  padding: 50px;
+  height: 20vh;
+  justify-content: center;
+}
+
+.date_modal span {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.date_modal input {
+  margin-top: 15px;
+  width: 60%;
+}
+
+.date_container button {
+  color: #de4f85;
+  border: 1px #de4f85 solid;
+  border-radius: 8px;
+  margin-top: 25px;
+  padding: 10px;
 }
