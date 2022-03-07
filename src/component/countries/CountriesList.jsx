@@ -1,23 +1,18 @@
-import React from 'react'
+import React from 'react';
 import { useSelector } from 'react-redux';
 import County from './County';
 
 const CountriesList = () => {
-	const stats = useSelector((state) => state.statsReducer)
+  const stats = useSelector((state) => state.statsReducer);
 
-	const list = stats ? 
-	  stats
-		.filter((item) => item.id != 'selected' && item.id != 'Total')
-	  .map((item) => {
-		return (
-		<li key={item.id}>
+  const list = stats ? stats.filter((item) => item.id !== 'selected' && item.id !== 'Total').map((item) => (
+		  <li key={item.id}>
      <County 
-		 countryName = {item.name}
-		 confimedCases = {item.todayConfirmed}
+		 countryName={item.name}
+		 confimedCases={item.todayConfirmed}
 		 />
-		</li>)
-
-	}) : [];
+		</li>
+	)) : [];
 
 	
 

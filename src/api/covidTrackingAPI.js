@@ -8,9 +8,9 @@ const getStatsFromAPI = async (selectedDate) => {
   const stringDate = selectedDate.toString();
   const { [stringDate]: date } = response.dates;
   const { countries } = date;
-  const { 
+  const {
     today_confirmed: totalTodayConfirmed,
-    today_new_deaths:  totaltodayNewDeaths,
+    today_new_deaths: totaltodayNewDeaths,
     today_new_recovered: totalTodayNewRecovered,
     yesterday_deaths: totalYesterdayDeaths,
   } = response.total;
@@ -36,14 +36,14 @@ const getStatsFromAPI = async (selectedDate) => {
       todayVsYesterdayDeaths: item[1].today_vs_yesterday_deaths,
       todayVsYesterdayConfirmed: item[1].today_vs_yesterday_confirmed,
       todayRecovered: item[1].today_recovered,
-    })
-  })
-  
+    });
+  });
+
   // for (const key in countries) {
-    //   const obj = {};
-    //   obj[key] = {};
-    //   const {
-      //     name,
+  //   const obj = {};
+  //   obj[key] = {};
+  //   const {
+  //     name,
   //     today_confirmed: todayConfirmed,
   //     today_new_deaths: todayNewDeaths,
   //     today_new_recovered: todayNewRecovered,
