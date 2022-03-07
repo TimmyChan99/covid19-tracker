@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
+import { NavLink } from 'react-router-dom';
 import { getStatsFromAPIDispatcher } from '../../redux/dates/date'
 import './date.css'
 
@@ -16,7 +17,9 @@ const Date = () => {
 				<span>Choose a Specific Day</span>
 				<input type="date" onChange={getDate}/>
 			</div>
-				<button type="button">Show stats</button>
+			<NavLink to="/countries-list">
+				<button type="button">Show Stats</button>
+			</NavLink>
 		</div>
 	)
 }

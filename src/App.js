@@ -10,8 +10,8 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="covid19-tracker/" element={<Date />} />
-        <Route path="covid19-tracker/countries-list" element={<CountriesList />} />
+        <Route path="/" element={<Date />} />
+        <Route path="/countries-list" element={<CountriesList />} />
         <Route path="/detail" element={<Details />} />
       </Routes>
     </Router>
