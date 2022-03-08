@@ -27,22 +27,25 @@ const getStatsFromAPI = async (selectedDate) => {
   });
 
   countriesStats.push(totalStat);
-
-
-  
   return countriesStats;
 };
 
-export const getRegions = async () => {
-  const getRegions = await axios.get(`${url}/2022-02-03/country/france`);
-  const regionsRes = getRegions.data;
-  const stringDate = selectedDate.toString();
-  const { [stringDate]: dateRegion } = regionsRes.dates;
-  const { countries } = dateRegion;
-  const { "France" : country } = countries;
-  const regionTest = Object.entries(country);
+export const getRegions = async (county, selectedDate) => {
+  const countriesLit = await getStatsFromAPI(selectedDate); //
   const obj = {};
-  regionTest.forEach((item) => {
+  const array = Object.entries(countriesLit);
+  for(let i = 0; i < array.length; i++) {
+    const { id: countryId, name: countryName, countryNewCases} = array[i][1];
+    const regionsList = await axios.get(`${url}${selectedDate}/country/${countryName.toLowerCase()}`);
+    const regionsRes = regionsList.data;
+    const stringDate = selectedDate.toString();
+    const { [stringDate]: dateRegion } = regionsRes.dates;
+    const { countries } = dateRegion;
+    const { [ countryName ] : country } = countries;
+    console.log(country);
+    const regionTest = Object.entries(country);
+    regionTest.forEach((item) => {
+      console.log(item);
     switch (true) {
       case item[0] === "id":
         obj.id = item[1];
@@ -60,11 +63,13 @@ export const getRegions = async () => {
           regionsArray.push({ regionId, regionName, regionNewCases});
         } 
         )
-          obj.regions = regionsArray;
+        obj.regions = regionsArray;
         break;
-    }
-  })
+      }
+    })
+  }
   console.log(obj);
+  return obj;
 }
 
 

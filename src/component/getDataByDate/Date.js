@@ -1,14 +1,15 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { getStatsFromAPIDispatcher } from '../../redux/dates/date';
+import { getStatsFromAPIDispatcher, getRegionsFromAPIDispatcher } from '../../redux/dates/date';
 import './date.css';
 
 const Date = () => {
   const dispatch = useDispatch();
   const getDate = (e) => {
     const date = e.target.value;
-    dispatch(getStatsFromAPIDispatcher(date));
+    //dispatch(getStatsFromAPIDispatcher(date));
+    dispatch(getRegionsFromAPIDispatcher(date));
   };
   return (
     <div className="date_container d-flex-column">
