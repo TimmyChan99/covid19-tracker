@@ -10,16 +10,10 @@ const getStatsFromAPI = async (selectedDate) => {
   const { countries } = date;
   const {
     today_confirmed: totalTodayConfirmed,
-    today_new_deaths: totaltodayNewDeaths,
-    today_new_recovered: totalTodayNewRecovered,
-    yesterday_deaths: totalYesterdayDeaths,
   } = response.total;
   const totalStat = {
     id: 'Total',
     totalTodayConfirmed,
-    totaltodayNewDeaths,
-    totalTodayNewRecovered,
-    totalYesterdayDeaths,
   };
 
   const countriesStats = [];
@@ -29,46 +23,49 @@ const getStatsFromAPI = async (selectedDate) => {
       id: item[0],
       name: item[0],
       todayConfirmed: item[1].today_confirmed,
-      todayNewDeaths: item[1].today_new_deaths,
-      todayNewRecovered: item[1].today_new_recovered,
-      yesterdayDeaths: item[1].yesterday_deaths,
-      todayVsYesterdayOpenCases: item[1].today_vs_yesterday_open_cases,
-      todayVsYesterdayDeaths: item[1].today_vs_yesterday_deaths,
-      todayVsYesterdayConfirmed: item[1].today_vs_yesterday_confirmed,
-      todayRecovered: item[1].today_recovered,
     });
   });
 
-  // for (const key in countries) {
-  //   const obj = {};
-  //   obj[key] = {};
-  //   const {
-  //     name,
-  //     today_confirmed: todayConfirmed,
-  //     today_new_deaths: todayNewDeaths,
-  //     today_new_recovered: todayNewRecovered,
-  //     yesterday_deaths: yesterdayDeaths,
-  //     today_vs_yesterday_open_cases: todayVsYesterdayOpenCases,
-  //     today_vs_yesterday_deaths: todayVsYesterdayDeaths,
-  //     today_vs_yesterday_confirmed: todayVsYesterdayConfirmed,
-  //     today_recovered: todayRecovered,
-  //   } = countries[key];
-
-  //   countriesStats.push({
-  //     id: name,
-  //     name,
-  //     todayConfirmed,
-  //     todayNewDeaths,
-  //     todayNewRecovered,
-  //     yesterdayDeaths,
-  //     todayVsYesterdayOpenCases,
-  //     todayVsYesterdayDeaths,
-  //     todayVsYesterdayConfirmed,
-  //     todayRecovered,
-  //   });
-  // }
   countriesStats.push(totalStat);
+
+
+  
   return countriesStats;
 };
+
+export const getRegions = async () => {
+  const getRegions = await axios.get(`${url}/2022-02-03/country/france`);
+  const regionsRes = getRegions.data;
+  const stringDate = selectedDate.toString();
+  const { [stringDate]: dateRegion } = regionsRes.dates;
+  const { countries } = dateRegion;
+  const { "France" : country } = countries;
+  const regionTest = Object.entries(country);
+  const obj = {};
+  regionTest.forEach((item) => {
+    switch (true) {
+      case item[0] === "id":
+        obj.id = item[1];
+        break;
+      case item[0] === "name":
+          obj.name = item[1];
+        break;
+      case item[0] === "today_confirmed":
+          obj.newCases = item[1];
+        break;
+      case item[0] === "regions":
+        const regionsArray = [];
+        Object.entries(item[1]).map((region) => {
+          const { id: regionId, name: regionName, today_confirmed: regionNewCases} = region[1];
+          regionsArray.push({ regionId, regionName, regionNewCases});
+        } 
+        )
+          obj.regions = regionsArray;
+        break;
+    }
+  })
+  console.log(obj);
+}
+
 
 export default getStatsFromAPI;
