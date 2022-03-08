@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './component/header/Header';
-import CountriesList from './component/countries/CountriesList';
+import RegionsList from './component/countries/RegionsList';
 import Date from './component/getDataByDate/Date';
 import Details from './component/detailsPage/Details';
 
@@ -11,8 +11,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Date />} />
-        <Route path="/countries-list" element={<CountriesList />} />
-        <Route path="/detail" element={<Details />} />
+        <Route path="/regions" element={<RegionsList />} />
+        <Route path="/countries-list" element={<Details />} />
       </Routes>
     </Router>
   );
