@@ -1,9 +1,10 @@
 import getStatsFromAPI from '../../api/covidTrackingAPI';
-import { getRegions } from '../../api/covidTrackingAPI';
+import { getRegions, getAllStatitics } from '../../api/covidTrackingAPI';
 
 const GET_STATS = 'covid19-tracker/dates/GET_STATS';
 const STORE_SELECTED_COUNTRY = 'covid19-tracker/dates/STORE_SELECTED_COUNTRY';
 const GET_REGIONS = 'covid19-tracker/dates/GET_REGIONS';
+const ALL_DATA = 'covid19-tracker/dates/ALL_DATA';
 
 const initialState = [
   { id: 'selected', name: 'default' },
@@ -14,9 +15,9 @@ export const getStatsAction = (data) => ({
   payload: data,
 });
 
-export const getRegionsAction = (regions) => ({
+export const getRegionsAction = (statistics) => ({
   type: GET_REGIONS,
-  payload: regions,
+  payload: statistics,
 })
 
 
@@ -31,9 +32,21 @@ export const getStatsFromAPIDispatcher = (selectedDate) => async (dispatch) => {
 };
 
 export const getRegionsFromAPIDispatcher = (selectedDate) => async (dispatch) => {
-  const regions = await getRegions('france', selectedDate);
-  dispatch(getRegionsAction(regions))
+  const allStats = await getRegions(selectedDate);
+  dispatch(getRegionsAction(allStats))
 };
+
+export const getAllStatisticsAction = (data) => ({
+  type: ALL_DATA,
+  payload: data,
+})
+
+
+export const getAllStatiticsDispatcher = (selectedDate) => async (dispatch) => {
+  const data = await getAllStatitics(selectedDate);
+  dispatch(getAllStatisticsAction(data));
+}
+
 
 const statsReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -44,8 +57,12 @@ const statsReducer = (state = initialState, action) => {
       return state.map((item) => (item.id === 'selected' ? { ...item, name: action.payload } : item));
 
     case GET_REGIONS:
-      console.log(action.payload);
-      return [...state, { regions: action.payload }];
+      console.log('get regions action');
+      return [...state, { data: action.payload }];
+    
+      case ALL_DATA :
+      console.log('get regions action');
+      return [...state,  action.payload ];
 
     default:
       return state;
