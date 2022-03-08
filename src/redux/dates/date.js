@@ -29,7 +29,6 @@ const statsReducer = (state = initialState, action) => {
       return state.map((item) => (item.id === 'selected' ? { ...item, name: (action.payload ? action.payload : 'China') } : item));
 
     case ALL_DATA:
-      console.log('get regions action');
       return [...state, action.payload];
 
     default:

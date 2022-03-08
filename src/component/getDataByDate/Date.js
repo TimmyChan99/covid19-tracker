@@ -10,7 +10,7 @@ const Date = () => {
     const date = e.target.value;
     dispatch(getAllStatiticsDispatcher());
   };
-  const test = () => { dispatch(getAllStatiticsDispatcher()) };
+  const test = () => { dispatch(getAllStatiticsDispatcher()); };
   return (
     <div className="date_container d-flex-column">
       <h1>Covid-19 Tracker</h1>
@@ -20,11 +20,11 @@ const Date = () => {
       </div>
       <NavLink to="/countries-list">
         <button
-        onClick={test}
-         type="button"
+          onClick={test}
+          type="button"
         >
           Show Stats
-          </button>
+        </button>
       </NavLink>
     </div>
   );

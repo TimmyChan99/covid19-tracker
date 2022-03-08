@@ -8,7 +8,7 @@ export const getAllStatitics = async () => {
   const { name, today_new_confirmed: totalNewCases } = response.total;
   const allStatistics = [];
   allStatistics.push({ name, totalNewCases });
-  const { "2022-02-10": date } = response.dates;
+  const { '2022-02-10': date } = response.dates;
   const statsList = Object.entries(date.countries);
   statsList.map((item) => {
     const obj = {};
