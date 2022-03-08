@@ -7,10 +7,10 @@ import CountryBox from './CountryBox';
 
 const Details = () => {
   
-  const countries = useSelector((state) => state.statsReducer);
-  const countryName = countries[0].name;
-  const selectedCountry = countries ? countries.filter((item) => (item.id === countryName || item.id === 'Total')) : defaultData;
-  console.log(selectedCountry);
+  // const countries = useSelector((state) => state.statsReducer);
+  // console.log(countries);
+  // const countryName = countries[0].name;
+  // const selectedCountry = countries ? countries.filter((item) => (item.id === countryName || item.id === 'Total')) : defaultData;
   return (
     <div>
       
