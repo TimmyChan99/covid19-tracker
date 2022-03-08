@@ -25,7 +25,7 @@ const StatsDetails = () => {
   const countries = useSelector((state) => state.statsReducer);
   const countryName = countries[0].name;
   const selectedCountry = countries ? countries.filter((item) => (item.id === countryName || item.id === 'Total')) : defaultData;
-	console.log(selectedCountry);
+  console.log(selectedCountry);
   return (
     <div className="country_details">
       <div className="headline">
