@@ -1,14 +1,14 @@
 import axios from 'axios';
 
-const url = 'https://api.covid19tracking.narrativa.com/api/';
+const url = 'https://api.covid19tracking.narrativa.com/api';
 
-export const getAllStatitics = async (selectedDate) => {
-  const getData = await axios.get(`${url}${selectedDate}`);
+export const getAllStatitics = async () => {
+  const getData = await axios.get(`${url}/2022-02-10`);
   const response = getData.data;
   const { name, today_new_confirmed: totalNewCases } = response.total;
   const allStatistics = [];
   allStatistics.push({ name, totalNewCases });
-  const { [selectedDate]: date } = response.dates;
+  const { "2022-02-10": date } = response.dates;
   const statsList = Object.entries(date.countries);
   statsList.map((item) => {
     const obj = {};

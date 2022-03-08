@@ -7,7 +7,9 @@ import { storeSelectedCountry } from '../../redux/dates/date';
 const CountryBox = ({ countryName, countryNewCases }) => {
   const dispatch = useDispatch();
   const getCountryName = (e) => {
-    dispatch(storeSelectedCountry(e.target.id));
+    const { id } = e.currentTarget;
+    console.log('here', id);
+    dispatch(storeSelectedCountry(id));
   };
 
   return (

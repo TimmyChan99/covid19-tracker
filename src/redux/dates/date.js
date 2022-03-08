@@ -18,15 +18,15 @@ export const getAllStatisticsAction = (data) => ({
   payload: data,
 });
 
-export const getAllStatiticsDispatcher = (selectedDate) => async (dispatch) => {
-  const data = await getAllStatitics(selectedDate);
+export const getAllStatiticsDispatcher = () => async (dispatch) => {
+  const data = await getAllStatitics();
   dispatch(getAllStatisticsAction(data));
 };
 
 const statsReducer = (state = initialState, action) => {
   switch (action.type) {
     case STORE_SELECTED_COUNTRY:
-      return state.map((item) => (item.id === 'selected' ? { ...item, name: action.payload } : item));
+      return state.map((item) => (item.id === 'selected' ? { ...item, name: (action.payload ? action.payload : 'China') } : item));
 
     case ALL_DATA:
       console.log('get regions action');

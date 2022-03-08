@@ -10,7 +10,7 @@ const RegionsList = () => {
   const selectedCountry = stats[1].filter((item) => item.countryName === selectedCountryName);
   // const { regions } = selectedCountry[0];
   const country = selectedCountry[0];
-
+  
   return (
 
     <ul className="regions_list">
