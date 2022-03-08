@@ -34,10 +34,12 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+  background: #dc4782;
 }
 
 .box {
   min-height: 180px;
+  background: #dc4782;
 }
 
 .country {
@@ -69,4 +71,10 @@ li {
   width: 115px;
   left: 14px;
   top: 5px;
+}
+
+.arrow {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
 }

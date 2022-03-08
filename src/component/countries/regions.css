@@ -7,11 +7,11 @@
   color: #fff;
 }
 
-.countries_list li {
+.regions_list li {
   background-color: #d04379;
 }
 
-.countries_list li:nth-child(odd) {
+.regions_list li:nth-child(odd) {
   background-color: #ec4c8a;
 }
 

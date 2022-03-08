@@ -2,15 +2,15 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import './countries.css';
+import './regions.css';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { storeSelectedCountry } from '../../redux/dates/date';
 
 const Region = ({ countryName, confimedCases }) => {
   const dispatch = useDispatch();
   const getCountryName = (e) => {
-    
-   // dispatch(storeSelectedCountry(e.target.parentNode.value));
+
+    // dispatch(storeSelectedCountry(e.target.parentNode.value));
   };
   return (
     <div className="the_country">
