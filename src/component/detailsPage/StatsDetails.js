@@ -4,7 +4,6 @@ import { GiWorld } from 'react-icons/gi';
 import CountryBox from './CountryBox';
 
 const StatsDetails = () => {
-  const ids = [1, 2, 3, 4, 5, 6, 7, 8];
   const countries = useSelector((state) => state.statsReducer);
   const countriesList = countries ? countries[1].filter((item) => item.id !== 'selected' && item.name !== 'Total').map((item) => (
     <li
