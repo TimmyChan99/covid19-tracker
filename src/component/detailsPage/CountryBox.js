@@ -8,13 +8,12 @@ const CountryBox = ({ countryName, countryNewCases }) => {
   const dispatch = useDispatch();
   const getCountryName = (e) => {
     const { id } = e.currentTarget;
-    console.log('here', id);
     dispatch(storeSelectedCountry(id));
   };
 
   return (
     <div className="country d-flex-column">
-      <NavLink to="/regions" className="arrow">
+      <NavLink to={`${countryName}/regions/`} className="arrow">
         <BsArrowRightCircle id={countryName} onClick={getCountryName} />
       </NavLink>
       <div className="info d-flex-column">

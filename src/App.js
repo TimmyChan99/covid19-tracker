@@ -11,8 +11,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Date />} />
-        <Route path="/regions" element={<RegionsList />} />
         <Route path="/countries-list" element={<Details />} />
+        <Route path="/countries-list/:countryName/regions/" element={<RegionsList />} />
       </Routes>
     </Router>
   );

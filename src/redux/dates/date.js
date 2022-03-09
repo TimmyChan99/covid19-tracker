@@ -26,7 +26,7 @@ export const getAllStatiticsDispatcher = () => async (dispatch) => {
 const statsReducer = (state = initialState, action) => {
   switch (action.type) {
     case STORE_SELECTED_COUNTRY:
-      return state.map((item) => (item.id === 'selected' ? { ...item, name: (action.payload ? action.payload : 'China') } : item));
+      return state.map((item) => (item.id === 'selected' ? { ...item, name: action.payload } : item));
 
     case ALL_DATA:
       return [...state, action.payload];
