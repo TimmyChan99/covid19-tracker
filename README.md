@@ -1,70 +1,85 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-## Available Scripts
+# COVID-19 Tracker
 
-In the project directory, you can run:
+Covid-19 Tracker is a mobile web application that provide the user the new cases of Covid-19 for each country and also the regions within the country 
+by getting all the data and the statistics from [Narrativa](https://covid19tracking.narrativa.com/index_en.html).
 
-### `npm start`
+The web app consists of Home, Countries List, and the Regions List page.The original design idea belongs to Nelson Sakwa. [Link to the original design.](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Select the desired date 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This page allow the user to get the statistics by entring a specific day date. 
 
-### `npm test`
+![covid19-2](https://user-images.githubusercontent.com/92228303/157505422-7afd491f-af55-4c5f-a011-35aec3d8c2cb.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Countries list (main page)
 
-### `npm run build`
+This page provide the user with the list countries along with the new Covid-19 cases when the user click on button Show Stats in the previous page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![covid19-1](https://user-images.githubusercontent.com/92228303/157505962-393ada12-874a-4b7d-98d6-390297e78528.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Regions List
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This page provide the user with the new Covid-19 cases of each region in the selected country when they click on it.
 
-### `npm run eject`
+![covid19-3](https://user-images.githubusercontent.com/92228303/157506433-d675e4cc-2a56-4007-9c49-6a0e9761b044.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Built With
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- HTML
+- CSS
+- JavaScript
+- React
+- Redux
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Live Demo
 
-## Learn More
+[Live Demo Link](https://timmychan99.github.io/covid19-tracker/) 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Getting Started
 
-### Code Splitting
+### **Setup**
+To get a local copy up and running follow these simple example steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Run `git clone https://github.com/TimmyChan99/covid19-tracker.git`
+- Go to the folder `cd covid19-tracker`
 
-### Analyzing the Bundle Size
+- Run `npm install` : To install packages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Run `npm start` : You should now have the project running locally on a dev server.
+ (Open http://localhost:3000 to view it in your browser.)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+👤 **Fatima Ezzahra**
 
-### Deployment
+- GitHub: [@TimmyChan99](https://github.com/TimmyChan99)
+- Twitter: [@elemenoun](https://twitter.com/elemenoun)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/fatima-ezzahra-elemenoun-020841225/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
