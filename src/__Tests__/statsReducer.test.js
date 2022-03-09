@@ -1,7 +1,7 @@
 import { data, initialState } from './reduxMock';
 import statsReducer, { getAllStatisticsAction, storeSelectedCountry } from '../redux/dates/date';
 
-const expected = 	[
+const expected = [
   { id: 'selected', name: 'default' },
   [
     {

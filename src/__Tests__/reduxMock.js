@@ -1,7 +1,3 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import logger from 'redux-logger';
-
 const STORE_SELECTED_COUNTRY = 'covid19-tracker/__Test__/STORE_SELECTED_COUNTRY';
 const ALL_DATA = 'covid19-tracker/__Test__/ALL_DATA';
 
@@ -62,16 +58,5 @@ const statsReducer = (state = initialState, action) => {
   }
 };
 
-// Store mock
-
-const reducer = combineReducers({
-  statsReducer,
-});
-
-const store = createStore(
-  reducer,
-  applyMiddleware(logger, thunk),
-);
-
-export default store;
+export default statsReducer;
 export { data, initialState };
