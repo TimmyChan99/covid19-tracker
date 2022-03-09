@@ -37,3 +37,10 @@
 .search button {
   color: black;
 }
+
+.no_region {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

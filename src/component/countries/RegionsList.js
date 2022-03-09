@@ -17,7 +17,7 @@ const RegionsList = () => {
       { stats[0].name !== 'default'
         ? (
           <div>
-            (
+
             <div className="headline d-flex-row">
               <GiWorld className="world" />
               <div className="headline_total">
@@ -38,10 +38,10 @@ const RegionsList = () => {
               confimedCases={region.regionNewCases}
             />
           </li>
-        )) : (<h2>no region found</h2>)
+        )) : (<h2 className="no_region">no region found</h2>)
       }
             </ul>
-            )
+
           </div>
         ) : (<ErrorMessage />)}
     </>
