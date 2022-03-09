@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { storeSelectedCountry } from '../../redux/dates/date';
 
 const CountryBox = ({ countryName, countryNewCases }) => {
@@ -13,7 +14,7 @@ const CountryBox = ({ countryName, countryNewCases }) => {
 
   return (
     <div className="country d-flex-column">
-      <NavLink to={`${countryName}/regions/`} className="arrow">
+      <NavLink to={`/covid19-tracker/countries-list/${countryName}/regions/`} className="arrow">
         <BsArrowRightCircle id={countryName} onClick={getCountryName} />
       </NavLink>
       <div className="info d-flex-column">
@@ -31,6 +32,11 @@ const CountryBox = ({ countryName, countryNewCases }) => {
       />
     </div>
   );
+};
+
+CountryBox.propTypes = {
+  countryName: PropTypes.string.isRequired,
+  countryNewCases: PropTypes.number.isRequired,
 };
 
 export default CountryBox;

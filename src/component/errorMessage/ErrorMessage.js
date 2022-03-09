@@ -6,7 +6,7 @@ const ErrorMessage = () => (
     <h3>
       No Statistics Found
     </h3>
-    <span>Try again</span>
+    <span>Try again By changing the date</span>
   </div>
 );
 

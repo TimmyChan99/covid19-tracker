@@ -1,7 +1,6 @@
-import getStatsFromAPI, { getRegions, getAllStatitics } from '../../api/covidTrackingAPI';
+import getAllStatitics from '../../api/covidTrackingAPI';
 
 const STORE_SELECTED_COUNTRY = 'covid19-tracker/dates/STORE_SELECTED_COUNTRY';
-const GET_REGIONS = 'covid19-tracker/dates/GET_REGIONS';
 const ALL_DATA = 'covid19-tracker/dates/ALL_DATA';
 
 const initialState = [
@@ -18,8 +17,8 @@ export const getAllStatisticsAction = (data) => ({
   payload: data,
 });
 
-export const getAllStatiticsDispatcher = () => async (dispatch) => {
-  const data = await getAllStatitics();
+export const getAllStatiticsDispatcher = (date) => async (dispatch) => {
+  const data = await getAllStatitics(date);
   dispatch(getAllStatisticsAction(data));
 };
 

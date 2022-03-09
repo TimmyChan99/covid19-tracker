@@ -11,6 +11,7 @@ const Details = () => {
     <div>
 
       { (countries.length > 1) ? (<StatsDetails />) : (<ErrorMessage />) }
+
     </div>
   );
 };

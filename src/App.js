@@ -10,9 +10,9 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Date />} />
-        <Route path="/countries-list" element={<Details />} />
-        <Route path="/countries-list/:countryName/regions/" element={<RegionsList />} />
+        <Route path="/covid19-tracker/" element={<Date />} />
+        <Route path="/covid19-tracker/countries-list" element={<Details />} />
+        <Route path="/covid19-tracker/countries-list/:countryName/regions/" element={<RegionsList />} />
       </Routes>
     </Router>
   );

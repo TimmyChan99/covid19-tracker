@@ -8,9 +8,8 @@ const Date = () => {
   const dispatch = useDispatch();
   const getDate = (e) => {
     const date = e.target.value;
-    dispatch(getAllStatiticsDispatcher());
+    dispatch(getAllStatiticsDispatcher(date));
   };
-  const test = () => { dispatch(getAllStatiticsDispatcher()); };
   return (
     <div className="date_container d-flex-column">
       <h1>Covid-19 Tracker</h1>
@@ -18,9 +17,8 @@ const Date = () => {
         <span>Choose a Specific Day</span>
         <input type="date" onChange={getDate} />
       </div>
-      <NavLink to="/countries-list">
+      <NavLink to="/covid19-tracker/countries-list">
         <button
-          onClick={test}
           type="button"
         >
           Show Stats
