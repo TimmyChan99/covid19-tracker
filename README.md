@@ -3,10 +3,9 @@
 
 # COVID-19 Tracker
 
-Covid-19 Tracker is a mobile web application that provide the user the new cases of Covid-19 for each country and also the regions within the country 
-by getting all the data and the statistics from [Narrativa](https://covid19tracking.narrativa.com/index_en.html).
+Covid-19 Tracker is a mobile web application that provide the user the new cases of Covid-19 for each country and also the regions within the country .
 
-The web app consists of Home, Countries List, and the Regions List page.The original design idea belongs to Nelson Sakwa. [Link to the original design.](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29)
+The web app consists of Home, Countries List, and the Regions List page.
 
 ### Select the desired date 
 
@@ -76,9 +75,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- All the data and the statistics are from [Narrativa](https://covid19tracking.narrativa.com/index_en.html).
+- The original design idea belongs to Nelson Sakwa. [Link to the original design.](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29)
 
 ## 📝 License
 
