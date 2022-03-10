@@ -4,7 +4,6 @@
 # COVID-19 Tracker
 
 Covid-19 Tracker is a mobile web application that provide the user the new cases of Covid-19 for each country and also the regions within the country .
-
 The web app consists of Home, Countries List, and the Regions List page.
 
 ### Select the desired date 
