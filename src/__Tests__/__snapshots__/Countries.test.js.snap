@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Region component 1`] = `
+<div
+  className="country d-flex-column"
+>
+  <a
+    className="arrow"
+    href="/covid19-tracker/countries-list/Country/regions/"
+    onClick={[Function]}
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      id="Country"
+      onClick={[Function]}
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 16 16"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+        fillRule="evenodd"
+      />
+    </svg>
+  </a>
+  <div
+    className="info d-flex-column"
+  >
+    <span
+      className="country_name"
+    >
+      Country
+    </span>
+    <span
+      className="stat_number"
+    >
+      152
+       
+      cases
+    </span>
+  </div>
+  <img
+    alt="country map"
+    className="map_img"
+    src="https://raw.githubusercontent.com/djaiss/mapsicon/33ba28808f8d32b5bae0ffada9cadd07073852e1/all/ad/vector.svg"
+  />
+</div>
+`;
+
+exports[`Test Region component 2`] = `
+<div>
+  <div
+    className="message_err"
+  >
+    <h3>
+      No Statistics Found
+    </h3>
+    <span>
+      Try again By changing the date
+    </span>
+  </div>
+</div>
+`;
