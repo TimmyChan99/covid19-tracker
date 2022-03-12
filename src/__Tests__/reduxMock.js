@@ -41,11 +41,11 @@ export const getAllStatisticsAction = (data) => ({
   payload: data,
 });
 
-export const getAllStatiticsDispatcher = () => async (dispatch) => {
-  dispatch(getAllStatisticsAction(data));
-};
+// export const getAllStatiticsDispatcher = () => async (dispatch) => {
+//   dispatch(getAllStatisticsAction(data));
+// };
 
-const statsReducer = (state = initialState, action) => {
+const statsReducerMock = (state = initialState, action) => {
   switch (action.type) {
     case STORE_SELECTED_COUNTRY:
       return state.map((item) => (item.id === 'selected' ? { ...item, name: action.payload } : item));
@@ -58,5 +58,5 @@ const statsReducer = (state = initialState, action) => {
   }
 };
 
-export default statsReducer;
+export default statsReducerMock;
 export { data, initialState };
