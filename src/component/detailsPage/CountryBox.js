@@ -27,8 +27,7 @@ const CountryBox = ({ countryName, countryNewCases }) => {
         </span>
       </div>
       { countriesMaps.map((item) => {
-        if (item.country === countryName) {
-          console.log(item.iso);
+        if (item.country.toLocaleLowerCase() === countryName.toLocaleLowerCase()) {
           return(<img
             key={item.iso}
             src={`https://raw.githubusercontent.com/djaiss/mapsicon/master/all/${item.iso.toLocaleLowerCase()}/128.png`}
@@ -36,7 +35,7 @@ const CountryBox = ({ countryName, countryNewCases }) => {
             className="map_img"
           />)
         }
-      })}
+        })}
     </div>
   );
 };
