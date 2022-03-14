@@ -4,6 +4,7 @@ import { BsArrowRightCircle } from 'react-icons/bs';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { storeSelectedCountry } from '../../redux/dates/date';
+import countriesMaps from '../../api/maps';
 
 const CountryBox = ({ countryName, countryNewCases }) => {
   const dispatch = useDispatch();
@@ -25,11 +26,16 @@ const CountryBox = ({ countryName, countryNewCases }) => {
           cases
         </span>
       </div>
-      <img
-        src="https://raw.githubusercontent.com/djaiss/mapsicon/33ba28808f8d32b5bae0ffada9cadd07073852e1/all/ad/vector.svg"
-        alt="country map"
-        className="map_img"
-      />
+      { countriesMaps.map((item) => {
+        if (item.country.toLocaleLowerCase() === countryName.toLocaleLowerCase()) {
+          return(<img
+            key={item.iso}
+            src={`https://raw.githubusercontent.com/djaiss/mapsicon/master/all/${item.iso.toLocaleLowerCase()}/128.png`}
+            alt="country map"
+            className="map_img"
+          />)
+        }
+        })}
     </div>
   );
 };
