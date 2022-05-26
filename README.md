@@ -33,6 +33,8 @@ This page provide the user with the new Covid-19 cases of each region in the sel
 - JavaScript
 - React
 - Redux
+- React Testing Library
+- Jest
 
 ## Live Demo
 
