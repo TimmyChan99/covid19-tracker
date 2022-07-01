@@ -1,6 +1,8 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
+***Notice: Narrativa’s COVID-19 tracking project is no longer providing the API data***
+
 # COVID-19 Tracker
 
 Covid-19 Tracker is a mobile web application that provide the user the new cases of Covid-19 for each country and also the regions within the country .
