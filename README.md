@@ -1,6 +1,7 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
+*Narrativa’s COVID-19 tracking project is no longer providing the API data.*
 
 # COVID-19 Tracker
 
