@@ -6,7 +6,7 @@ const ErrorMessage = () => (
     <h3>
       No Statistics Found
     </h3>
-    <span>Try again By changing the date</span>
+    <span>Narrativa’s COVID-19 tracking project is no longer providing the API data.</span>
   </div>
 );
 
